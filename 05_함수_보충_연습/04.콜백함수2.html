@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function hello(data, fn) {
+        return fn(data);
+      }
+
+      function hello2(data) {
+        return data / data;
+      }
+
+      function hello3(data) {
+        return data * 5;
+      }
+
+      function ab(fn1, fn2, fn3, data1, data2, data3) {
+        return fn1(data1, fn3) + data1; // 8 + 4
+      }
+
+      var rs = ab(hello, hello2, hello3, 4, 3, 7);
+      console.log(rs);
+    </script>
+  </body>
+</html>

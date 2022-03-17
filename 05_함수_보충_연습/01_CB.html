@@ -20,15 +20,19 @@
       }
 
       function fn1(data) {
-        return (rs1 = data * 2);
+        return data * 2;
       }
 
       function fn2(data) {
-        return (rs2 = data / 2);
+        return data / 2;
       }
 
-      rs1 = cb(fn1, 2);
-      rs2 = cb(fn2, 4);
+      rs1 = cb(function (data) {
+        return data * 2;
+      }, 2);
+      rs2 = cb(function (data) {
+        return data / 2;
+      }, 4);
       var rs = rs1 + rs2;
 
       console.log(rs); // 6

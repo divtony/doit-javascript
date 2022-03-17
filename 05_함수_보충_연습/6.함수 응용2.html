@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function p1(data) {
+        return data + data;
+      }
+
+      function p2(data) {
+        return data * data;
+      }
+
+      var fn1 = function (a, b, data1, data2) {
+        var rs = a(b(data1));
+        if (rs < 10) {
+          return rs;
+        }
+      };
+
+      var rs = fn1(p1, p2, 1, 6);
+      console.log(rs);
+    </script>
+  </body>
+</html>
