@@ -19,6 +19,12 @@
         { contens: "과학은 위대하다", writer: "장영실", like: 5, hate: 20 },
         { contens: "진격하라!", writer: "강감찬", like: 20, hate: 1 },
       ];
+      var sum = 0;
+      var like = comments.map(function (value, index) {
+        return (sum += value.like);
+      });
+
+      console.log(like); //숫자 144
 
       // 출력
       document.write(sum);

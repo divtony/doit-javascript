@@ -54,8 +54,39 @@
         할일에 체크된 수와
         완료에 체크된 수를 출력하는 프로그램을 작성하시오.
       */
-      var todo = 0;
+      var todo = 0; // 할일 된거 체크하여 카운트
       var success = 0;
+
+      var array1 = [];
+      var array2 = [];
+      var check1 = $("#todo input");
+      var check2 = $("#success input");
+
+      for (i = 0; i < check1.length; i++) {
+        var a = check1.eq(i).is(":checked");
+        if (a) {
+          array1.push(1);
+        } else {
+          array1.push(0);
+        }
+      }
+
+      array1.map(function (value, index) {
+        return (todo += value);
+      });
+
+      for (i = 0; i < check2.length; i++) {
+        var a = check2.eq(i).is(":checked");
+        if (a) {
+          array2.push(1);
+        } else {
+          array2.push(0);
+        }
+      }
+
+      array2.map(function (value, index) {
+        return (success += value);
+      });
 
       // 출력
       $("#result").html("할일갯수: " + todo + " 완료갯수: " + success);

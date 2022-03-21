@@ -23,9 +23,7 @@
 
       var filter = function (value, index) {
         // 여기를 작성하세요.
-        if (value.charAt(2) === "왕") {
-          return value;
-        }
+        return value.indexOf("왕") > 0;
       };
 
       var rs = array.filter(filter);

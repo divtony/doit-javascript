@@ -24,12 +24,8 @@
         "홍주석",
       ];
 
-      var rs = [];
-
-      array.filter(function (value, index) {
-        if (value.charAt(0) === "김") {
-          return rs.push(value);
-        }
+      var rs = array.filter(function (value, index) {
+        return value.charAt(0) === "김";
       });
 
       document.write(rs);

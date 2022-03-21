@@ -22,6 +22,10 @@
 
       var writers = [];
 
+      comments.filter(function (value, index) {
+        return writers.push(value.writer);
+      });
+
       // 출력
       document.write(writers);
     </script>

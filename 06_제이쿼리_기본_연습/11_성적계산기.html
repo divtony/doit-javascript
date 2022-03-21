@@ -22,8 +22,16 @@
         선택자.text();
       */
 
+      var a = parseInt($("ul li").eq(0).text().substring(3));
+      var b = parseInt($("ul li").eq(1).text().substring(3));
+      var c = parseInt($("ul li").eq(2).text().substring(3));
+
+      var score = a + b + c;
+      var average = parseInt(score / 3);
+
       // 출력
       document.write(score);
+      document.write("<br>");
       document.write(average);
     </script>
   </body>

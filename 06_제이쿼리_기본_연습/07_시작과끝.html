@@ -31,12 +31,18 @@
       */
 
       // 1. <span>사과</span>
+      var d = $("div div span").first();
+
+      console.log(d);
 
       // 2. <span>딸기</span>
+      $("div div span").last();
 
       // 3. <span>인텔</span>
+      var a = $("div div:eq(2) span").first();
 
       // 4. <span>애플</span>
+      var b = $("div div:eq(2) span").last();
     </script>
   </body>
 </html>
